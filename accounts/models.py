@@ -10,7 +10,7 @@ def user_path(instance, filename):
     arr = [choice(string.ascii_letters) for _ in range(8)] #대소문자 구분없이 가져오겠다.
     pid = ''.join(arr)
     extension = filename.split('.')[-1] # 사진. jpg라고 하면, .자르고 jpg만 가져옴
-    return 'accounts/{}/{}.{}'.format(instance.user.username, pid, extension)
+    return 'media/accounts/{}/{}.{}'.format(instance.user.username, pid, extension)
 
 # Create your models here.
 class Profile(models.Model):
@@ -21,8 +21,8 @@ class Profile(models.Model):
     picture = ProcessedImageField(upload_to=user_path,
                                   processors = [ResizeToFill(150,150)],
                                   format='JPEG',
-                                  options={'qulity': 90},
-                                  blank = True # 사진 안넣어도 되니!
+                                  options={'quality': 90},
+                                  blank = True # 사진 안넣어도 되면 blank True로 두자.
                                  )
     
     about = models.CharField(max_length = 300, blank=True) # blank로 비워도 된다.
@@ -34,5 +34,7 @@ class Profile(models.Model):
     )
     
     gender = models.CharField('성별(선택사항)',
-                             max_length = 10,
-                             choices = GENDER) # choices 옵션을 통해서 선택
+                             max_length = 10, #
+                             choices = GENDER,
+                             default='N') # choices 옵션을 통해서 선택
+    

@@ -130,7 +130,7 @@ STATICFILES_DIRS = [
 ]
 # Media file 이미지 파일이 올라가는 위치 즉, 변하는 파일  
 MEDIA_URL = '/media/'
-MEDIA_ROOR = BASE_DIR /'media'
+MEDIA_ROOR = BASE_DIR / 'media'
 
 LOGIN_REDIRECT_URL = '/'
 # Default primary key field type
