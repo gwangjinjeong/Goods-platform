@@ -4,8 +4,8 @@ Django 3.x  w/ Postgresql
 ### 사용 절차
    
 ```bash
-1. git clone https://github.com/mizykk/fanarcade.git    
-2. cd fanarcade    
+1. git clone https://github.com/gwangjinjeong/Goods-platform.git 
+2. cd Goods-platform    
 3. pip install virtualenv    
 4. virtualenv venv    
 5. source venv/bin/activate    
