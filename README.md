@@ -10,7 +10,7 @@ Django 3.x  w/ Postgresql
 4. virtualenv venv    
 5. source venv/bin/activate    
 6. pip install -r requirements.txt    
-7. sudo apt-get install update && sudo apt-get install upgrade      
+7. [Optional] sudo apt-get update && sudo apt-get upgrade      
 8. sudo apt-get install postgresql postgresql-contrib       
 9. sudo service postgresql restart    
 10. sudo -u postgres psql    
